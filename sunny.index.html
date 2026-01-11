@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SV Creators</title>
+
+<style>
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#f2f2f2;
+  text-align:center;
+}
+.section{
+  display:none;
+  padding:40px 20px;
+}
+.active{
+  display:block;
+}
+button{
+  padding:12px 25px;
+  font-size:18px;
+  background:#27ae60;
+  color:white;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+}
+.service{
+  background:#fff;
+  width:320px;
+  margin:15px auto;
+  padding:15px;
+  border-radius:8px;
+  box-shadow:0 0 5px rgba(0,0,0,0.1);
+}
+.price{
+  color:#e74c3c;
+  font-size:18px;
+  font-weight:bold;
+  cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HOME PAGE -->
+<div class="section active" id="home">
+  <h1 style="font-size:50px;color:#1f3c88;">
+    SV <span style="color:#27ae60;">CREATORS</span>
+  </h1>
+  <p style="font-size:18px;">Web & Graphic Design</p>
+  <button onclick="openPage('services')">Next Page</button>
+</div>
+
+<!-- SERVICES PAGE -->
+<div class="section" id="services">
+  <h1>Our Services</h1>
+
+  <div class="service">
+    Web Designing <br>
+    <span class="price" onclick="pay('Web Designing - ₹5000')">₹5000</span>
+  </div>
+
+  <div class="service">
+    Graphic Designing <br>
+    <span class="price" onclick="pay('Graphic Designing - ₹300')">₹300</span>
+  </div>
+
+  <div class="service">
+    Poster Designing <br>
+    <span class="price" onclick="pay('Poster Designing - ₹300')">₹300</span>
+  </div>
+
+  <div class="service">
+    Invitation Cards <br>
+    <span class="price" onclick="pay('Invitation Cards - ₹250')">₹250</span>
+  </div>
+
+  <div class="service">
+    YouTube & Instagram Channel Creator <br>
+    <span class="price" onclick="pay('Channel Creator - ₹2000')">₹2000</span>
+  </div>
+
+  <button onclick="openPage('final')">Contact Us</button>
+</div>
+
+<!-- FINAL PAGE -->
+<div class="section" id="final">
+  <h2>Contact Us</h2>
+  <p style="font-size:20px;">📞 7416131727</p>
+
+  <h3>Thank You For Visiting SV Creators</h3>
+  <p>
+    ✔ Trusted Service Provider <br>
+    ✔ Quality Design Work <br>
+    ✔ Affordable Prices <br>
+    ✔ Fast Delivery
+  </p>
+
+  <h4>Leave a Comment</h4>
+  <textarea style="width:300px;height:80px;" placeholder="Write your feedback..."></textarea><br><br>
+  <button>Submit</button>
+</div>
+
+<script>
+function openPage(id){
+  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+
+function pay(service){
+  let msg = "Hello SV Creators, I want " + service;
+  window.open("https://wa.me/917416131727?text=" + encodeURIComponent(msg));
+}
+</script>
+
+</body>
+</html>
+<div style="text-align:center; padding:30px;">
+  <h1 style="font-size:48px; color:#1f3c88; margin:0;">
+    SV <span style="color:#27ae60;">CREATORS</span>
+  </h1>
+  <p style="font-size:18px; color:#555;">Web & Graphic Design</p>
+</div>
+<script>
+function pay(service) {
+  let msg = "Hello SV Creators, I want " + service;
+  window.open("https://wa.me/917416131727?text=" + encodeURIComponent(msg));
+}
+</script>
+<div class="service">
+  Web Designing <br>
+  <span class="price" onclick="pay('Web Designing - ₹5000')">₹5000</span>
+</div>
+<div class="service">
+  Web Designing <br>
+  <span class="price" onclick="pay('Web Designing - ₹5000')">₹5000</span>
+</div>
